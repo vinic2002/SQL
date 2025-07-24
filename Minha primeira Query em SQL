@@ -1,0 +1,5 @@
+SELECT pr.produto, SUM(ve.qty*pr.preco)
+FROM produtos pr 
+JOIN vendas ve
+ON pr.codigo = ve.codigo
+GROUP BY produto
